@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ProjectLucia</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+        body {font-family: "Open Sans"}
+            .centered{
+                poisition: relative;
+                text-align: center;
+            }
+            .right
+            {float: right; }
+            img{
+                padding:1px;
+                border:1px solid #021a40;
+                background : url("./static/heart.svg") no-repeat;
+            }
+            .topleft{
+                position: relative;
+                top: 40px;
+                left: 900px;
+
+            }
+            .right1 .btn{
+                position: absolute;
+                top: 90%;
+                left: 1050px;
+                background-color: white;
+                color: blue;
+                font-size: 13px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                font-family: "Open Sans"
+            }
+            .btn:hover{
+                background-color: black;
+            }
+
+            .right2 .btn{
+                position: absolute;
+                top: 140%;
+                left: 1050px;
+                background-color: white;
+                color: blue;
+                font-size: 13px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                font-family: "Open Sans"
+            }
+
+            .right3 .btn{
+                position: absolute;
+                top: 190%;
+                left: 1050px;
+                background-color: white;
+                color: blue;
+                font-size: 13px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                font-family: "Open Sans"
+            }
+
+            .right4 .btn{
+                position: absolute;
+                top: 240%;
+                left: 1050px;
+                background-color: white;
+                color: blue;
+                font-size: 13px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                font-family: "Open Sans"
+            }
+
+            .right5 .btn{
+                position: absolute;
+                top: 290%;
+                left: 1050px;
+                background-color: white;
+                color: blue;
+                font-size: 13px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+                font-family: "Open Sans"
+            }
+            #myBtn {
+                    display: none;
+                    position: fixed;
+                    bottom: 20px;
+                    right: 30px;
+                    z-index: 99;
+                    font-size: 18px;
+                    border: none;
+                    outline: none;
+                    background-color: blue;
+                    color: white;
+                    cursor: pointer;
+                    padding: 15px;
+                    border-radius: 4px;
+                    }
+
+
+            #myBtn:hover {
+            background-color: #555;
+            }
+
+
+
+        </style>
+        <script>
+            function imgWindow() {
+            window.open("image") }
+        </script>
+    </head>
+    <body class="w3-light-grey">
+    <!----Header---->
+        <header class="w3-container w3-center w3-padding-48 w3-white">
+        <h1 class="w3-xxxlarge"><b>Favourites</b></h1>
+        <h4>Hit the like button if you like these images!</h4>
+        <h6>Website developed by Lucia Žužić for educational purposes as part of the CS50x Final Project</h6>
+    </header>
+
+
+    <!-- Navigation bar with icons -->
+        <div class="w3-bar w3-black w3-hide-small">
+            <a href="/home" class="w3-bar-item w3-button">Home</a>
+            <a href="/favourites" class="w3-bar-item w3-button">Favourites</a>
+            <a href="/aboutme" class="w3-bar-item w3-button">About me</a>
+            <a href="/contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+
+<!----Button TOP----->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Tap to get at the top</button>
+            <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+        <script>
+            function myFunction1() {
+            document.getElementById("demo1").innerHTML = "You liked the puppies!";
+            }
+            function myFunction2() {
+            document.getElementById("demo2").innerHTML = "You liked the food!";
+            }
+            function myFunction3() {
+            document.getElementById("demo3").innerHTML = "You liked the nature!";
+            }
+            function myFunction4() {
+            document.getElementById("demo4").innerHTML = "You liked music!";
+            }
+            function myFunction5() {
+            document.getElementById("demo5").innerHTML = "You liked the sea!";
+            }
+        </script>
+
+
+        <div class="right1">
+            <button class="btn" onclick="myFunction1()">Like</button>
+            <p id="demo1"></p>
+        </div>
+        <br>
+        <div class="right2">
+            <button class="btn" onclick="myFunction2()">Like</button>
+            <p id="demo2"></p>
+        </div>
+        <br>
+        <div class="right3">
+            <button class="btn" onclick="myFunction3()">Like</button>
+            <p id="demo3"></p>
+        </div>
+        <br>
+         <div class="right4">
+            <button class="btn" onclick="myFunction4()">Like</button>
+            <p id="demo4"></p>
+        </div>
+        <br>
+        <div class="right5">
+            <button class="btn" onclick="myFunction5()">Like</button>
+            <p id="demo5"></p>
+        </div>
+        <br>
+        <div class="centered">
+            <img src="./static/puppies.jpg" width="400" height="350">
+        </div>
+        <br>
+        <div class="centered">
+            <img src="./static/food.jpg" width="400" height="350">
+        </div>
+        <div class="centered">
+            <img src="./static/nature.jpg" width="400" height="350">
+        </div>
+        <div class="centered">
+            <img src="./static/music.jpg" width="400" height="350">
+        </div>
+        <br>
+        <div class="centered">
+            <img src="./static/sea.jpg" width="400" height="350">
+        </div>
+    </body>
+</html>
